@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Cards, Chart, CountryPicker, Header } from "./components";
-import styles from "./App.module.css";
+import { Cards, Chart, CountryPicker, Header, Footer } from "./components";
 import { fetchData } from "./api";
+
+import styles from "./App.module.css";
 
 class App extends Component {
   state = {
@@ -32,9 +33,10 @@ class App extends Component {
     return (
       <div className={styles.container}>
         <Header />
-        <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
+        <Cards data={data} />
         <Chart data={data} country={country} />
+        <Footer />
       </div>
     );
   }

@@ -7,15 +7,36 @@
 }
 
 .infected {
-    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+    background-color: rgba(0, 0, 255, 0.5) !important;
+    box-shadow: 1px 1px 0px #484794,
+        2px 2px 0px #484794,
+        3px 3px 0px #484794,
+        4px 4px 0px #484794,
+        5px 5px 0px #484794,
+        6px 6px 0px #484794 !important;
 }
 
 .recovered {
-    border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+    /* border-bottom: 10px solid rgba(0, 255, 0, 0.5); */
+    background-color: rgba(0, 255, 0, 0.5) !important;
+    box-shadow: 1px 1px 0px #7fc975,
+        2px 2px 0px #7fc975,
+        3px 3px 0px #7fc975,
+        4px 4px 0px #7fc975,
+        5px 5px 0px #7fc975,
+        6px 6px 0px #7fc975 !important;
+
 }
 
 .deaths {
-    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+    /* border-bottom: 10px solid rgba(255, 0, 0, 0.5); */
+    background-color: rgba(255, 0, 0, 0.5) !important;
+    box-shadow: 1px 1px 0px #b05f5f,
+        2px 2px 0px #b05f5f,
+        3px 3px 0px #b05f5f,
+        4px 4px 0px #b05f5f,
+        5px 5px 0px #b05f5f,
+        6px 6px 0px #b05f5f !important;
 }
 
 @media (max-width: 770px) {

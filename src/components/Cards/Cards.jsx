@@ -17,9 +17,18 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     return "Ładowanie...";
   }
 
+  const lastUpdateDate = new Date(lastUpdate);
+  const lastUpdateTime = [
+    lastUpdateDate.getHours(),
+    lastUpdateDate.getMinutes(),
+    lastUpdateDate.getSeconds(),
+  ];
+
+  console.log(lastUpdate);
+
   return (
     <div className={styles.container}>
-      <Grid container spacing={3} justify="center">
+      <Grid container spacing={1} justify="center">
         <Grid
           xs={12}
           md={3}
@@ -28,10 +37,15 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(styles.card, styles.infected)}
         >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography
+              className={styles.cardTitle}
+              color="textSecondary"
+              gutterBottom
+              align="center"
+            >
               Zainfekowani
             </Typography>
-            <Typography variant="h5">
+            <Typography variant="h5" align="center" gutterBottom>
               <CountUp
                 start={0}
                 end={confirmed.value}
@@ -40,7 +54,8 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toLocaleDateString()}
+              {lastUpdateDate.toLocaleDateString()} {lastUpdateTime[0]}:
+              {lastUpdateTime[1]}:{lastUpdateTime[2]}
             </Typography>
             <Typography variant="body2">
               Liczba zainfekowanych wirusem COVID-19
@@ -56,10 +71,15 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         >
           {" "}
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography
+              className={styles.cardTitle}
+              color="textSecondary"
+              gutterBottom
+              align="center"
+            >
               Wyleczeni
             </Typography>
-            <Typography variant="h5">
+            <Typography variant="h5" align="center" gutterBottom>
               <CountUp
                 start={0}
                 end={recovered.value}
@@ -68,7 +88,8 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toLocaleDateString()}
+              {lastUpdateDate.toLocaleDateString()} {lastUpdateTime[0]}:
+              {lastUpdateTime[1]}:{lastUpdateTime[2]}
             </Typography>
             <Typography variant="body2">
               Liczba ludzi, którzy wyzdrowieli z COVID-19
@@ -83,10 +104,15 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(styles.card, styles.deaths)}
         >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography
+              className={styles.cardTitle}
+              color="textSecondary"
+              gutterBottom
+              align="center"
+            >
               Zmarli
             </Typography>
-            <Typography variant="h5">
+            <Typography variant="h5" align="center" gutterBottom>
               <CountUp
                 start={0}
                 end={deaths.value}
@@ -95,7 +121,8 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>{" "}
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toLocaleDateString()}
+              {lastUpdateDate.toLocaleDateString()} {lastUpdateTime[0]}:
+              {lastUpdateTime[1]}:{lastUpdateTime[2]}
             </Typography>
             <Typography variant="body2">
               Liczba zgonów, spowodowana wirusem COVID-19
