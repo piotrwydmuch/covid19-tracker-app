@@ -12,7 +12,11 @@ const Footer = () => {
         </a>
         .
       </p>
-      <p className={styles.text}>Piotr Wydmuch | 2020</p>
+      <p className={styles.text}>
+        Piotr Wydmuch |{" "}
+        <a href="https://github.com/piotrwydmuch/covid19-tracker-app">GitHub</a>{" "}
+        | 2020
+      </p>
     </footer>
   );
 };
