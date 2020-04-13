@@ -1,4 +1,4 @@
-![Covid-19 tracker](src\images\app.PNG)
+![Covid-19 tracker](https://raw.githubusercontent.com/piotrwydmuch/covid19-tracker-app/master/src/images/app.PNG)
 
 ## Description:
 
