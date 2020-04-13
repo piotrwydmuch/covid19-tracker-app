@@ -14,7 +14,7 @@ import styles from "./Cards.module.css";
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   //Waiting for load API
   if (!confirmed) {
-    return "Loading...";
+    return "Ładowanie...";
   }
 
   return (
@@ -29,7 +29,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
-              Infected
+              Zainfekowani
             </Typography>
             <Typography variant="h5">
               <CountUp
@@ -40,10 +40,10 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toDateString()}
+              {new Date(lastUpdate).toLocaleDateString()}
             </Typography>
             <Typography variant="body2">
-              Number of active cases of COVID-19
+              Liczba zainfekowanych wirusem COVID-19
             </Typography>
           </CardContent>
         </Grid>
@@ -57,7 +57,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           {" "}
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
-              Recovered
+              Wyleczeni
             </Typography>
             <Typography variant="h5">
               <CountUp
@@ -68,10 +68,10 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toDateString()}
+              {new Date(lastUpdate).toLocaleDateString()}
             </Typography>
             <Typography variant="body2">
-              Number of recovered ppl from COVID-19
+              Liczba ludzi, którzy wyzdrowieli z COVID-19
             </Typography>
           </CardContent>
         </Grid>
@@ -84,7 +84,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
-              Deaths
+              Zmarli
             </Typography>
             <Typography variant="h5">
               <CountUp
@@ -95,10 +95,10 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>{" "}
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toDateString()}
+              {new Date(lastUpdate).toLocaleDateString()}
             </Typography>
             <Typography variant="body2">
-              Number of deaths caused by COVID-19
+              Liczba zgonów, spowodowana wirusem COVID-19
             </Typography>
           </CardContent>
         </Grid>
