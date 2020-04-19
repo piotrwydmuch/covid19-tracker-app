@@ -1,0 +1,29 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 10vh;
+  background-color: #7f7fff;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.nav > a {
+  list-style: none;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 800;
+  color: #000000;
+}
+.nav > a:hover {
+  color: #ffffff;
+}
+
+.logoImage {
+  max-width: 350px;
+}

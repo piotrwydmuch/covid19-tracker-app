@@ -1,5 +1,4 @@
 import React from "react";
-import logoImage from "../../images/logo.png";
 
 import styles from "./Header.module.css";
 
@@ -8,11 +7,6 @@ const Header = () => {
     <div className={styles.container}>
       <header className={styles.header}>
         <nav className={styles.nav}>
-          <img
-            src={logoImage}
-            className={styles.logoImage}
-            alt="COVID-19 logo"
-          />
           <div>
             <h1>
               Najnowsze statystyki dotyczące epidemii koronawirusa na świecie.
