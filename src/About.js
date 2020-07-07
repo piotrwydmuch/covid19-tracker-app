@@ -19,10 +19,6 @@ const About = () => {
           Aplikacja pozwala śledzić aktualne statystyki zachorowań, spododowane
           wirusem COVID-19.
         </p>
-        <p>
-          Aplikacja została wykonana w ramach projektu i kursu Politechniki
-          Warszawskiej- Architektury i technologie systemów internetowych.
-        </p>
       </div>
       <div>
         <h2>Technologie </h2>
